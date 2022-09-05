@@ -5,5 +5,6 @@ from . import views
 urlpatterns = [
     #path(URL, View Function you want to execute, 'name of the url')
     path('', views.index, name='index'),
-    path('specific', views.specific, name='specific')
+    path('specific', views.specific, name='specific'),
+    path('article/<int:article_id>', views.article, name='article')
 ]
