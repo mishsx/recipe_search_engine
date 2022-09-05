@@ -4,8 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("This is my first url")
-
+    return render(request, 'blog/index.html')
 
 def specific(request):
     return HttpResponse("This is the specific url")
