@@ -18,8 +18,6 @@
 
 </head>
 
-<>
-
     <div>
         <ul>
             <li>
@@ -34,9 +32,10 @@
     <div class="container row mt-5 text-center" style="margin-left:auto; margin-right:auto">
 
 
-        <form class="form-inline mb-5">
+        <form method="post" action="{% url 'search' %}" class="form-inline mb-5">
+            {% csrf_token %}
             <div class="form-group">
-                <input type="text" name="userText" class="form-control" placeholder="This is a search bar"
+                <input type="text" name="userText" class="form-control" placeholder="Search for a recipe..."
                     style="display: inline-block; width:30%;">
                 <input type="submit" class="btn btn-primary" value="Search">
             </div>
