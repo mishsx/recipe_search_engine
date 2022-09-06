@@ -31,35 +31,7 @@
 
 <div class="container row mt-5 text-center" style="margin-left:auto; margin-right:auto">
 
-
-    <form method="post" action="{% url 'search' %}" class="form-inline mb-5">
-        {% csrf_token %}
-        <div class="form-group">
-            <input type="text" name="userText" class="form-control" placeholder="Search for a recipe..."
-                style="display: inline-block; width:30%;">
-            <input type="submit" class="btn btn-primary" value="Search">
-        </div>
-    </form>
-
-    {% for recipe in recipes %}
-
-    <div class="col-lg-3 col-sm-12 mb-3">
-        <div class="card" style="width:18rem; margin: 0 auto">
-            <img src="{{ recipe.recipe.image}}" class="card-img-top" />
-            <div class="card-body">
-                <h5 class="card-title">{{ recipe.recipe.label }}</h5>
-                <p class="card-content">{{ recipe.recipe.source }}</p>
-
-                <details>
-                    <summary>details</summary>
-                    <p style="margin-top:10px">{{ recipe.recipe.calories }} kcal</p>
-                    <p>{{ recipe.recipe.ingredientLines}}</p>
-                </details>
-
-            </div>
-        </div>
-    </div>
-    {% endfor %}
+    <p>Contact us at recipe.search@gmail.com</p>
 
 </div>
 
